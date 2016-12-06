@@ -54,6 +54,10 @@ app.delete('/api/todos/:todo_id', function(req, res) {
   });
 });
 
+app.get('*', function(req, res) {
+  res.sendfile('./public/index.html');
+})
+
 var Todo = mongoose.model('Todo', {
   text : String
 });
