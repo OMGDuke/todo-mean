@@ -24,7 +24,7 @@ app.get('/api/todos', function(req, res) {
 
 app.post('/api/todos', function(req, res) {
   Todo.create({
-    text : req.body.text
+    text : req.body.text,
     done : false
   }, function(err, todo) {
     if (err) {
